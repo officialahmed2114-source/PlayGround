@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f4e9">
+  <link rel="icon" href="data:,">
+  <title>Pollen Path — Luffa Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Pollen Path home"><span class="brand-mark">✿</span><span>POLLEN <b>PATH</b></span></a>
+      <div class="top-center"><span class="season-dot"></span> FIELD NOTES <span class="divider">/</span> <b>LUFFA STUDY No. 01</b></div>
+      <button class="sound-toggle" id="soundToggle" aria-label="Toggle sound">♫ <span>Sound on</span></button>
+    </header>
+    <main>
+      <section class="intro-row">
+        <div><p class="eyebrow">A LITTLE SCIENCE, A LOT OF GROWING</p><h1>Pollen Path <em>×</em> Luffa Lab</h1><p class="intro-copy">Follow a flower's journey from first bloom to fruit—and discover the tiny details in between.</p></div>
+        <div class="day-card"><span class="sun-icon">☀</span><div><small>GARDEN DAY</small><strong id="dayCount">01</strong></div><span class="weather">Clear skies</span></div>
+      </section>
+      <nav class="mode-nav" aria-label="Game modes">
+        <button class="mode-tab active" id="gardenTab"><span class="tab-icon">⌂</span><span><b>THE GARDEN</b><small>Grow & pollinate</small></span><i class="tab-status" id="gardenStatus">IN PROGRESS</i></button>
+        <div class="nav-connector"><span></span></div>
+        <button class="mode-tab locked" id="labTab"><span class="tab-icon">⚗</span><span><b>LUFFA LAB</b><small>Look closer</small></span><i class="tab-status" id="labStatus">LOCKED</i></button>
+      </nav>
+
+      <section class="game-view" id="gardenView">
+        <div class="section-heading"><div><p class="eyebrow">YOUR GROWING PATCH</p><h2>The garden</h2></div><div class="progress-wrap"><div class="progress-label"><span>FIELD JOURNEY</span><b id="journeyLabel">Step 1 of 4</b></div><div class="progress-track"><span id="journeyProgress"></span></div></div></div>
+        <div class="garden-layout">
+          <div class="garden-scene">
+            <div class="scene-top"><span class="scene-tag"><i></i> LUFFA PATCH A</span><span class="scene-weather">☀ &nbsp;72° &nbsp;·&nbsp; gentle breeze</span></div>
+            <div class="skyline"><span class="cloud cloud-one"></span><span class="cloud cloud-two"></span><span class="sun-disc"></span><span class="hill hill-back"></span><span class="hill hill-front"></span></div>
+            <div class="garden-bed" id="gardenBed">
+              <div class="trellis"><span></span><span></span><span></span></div>
+              <div class="vine vine-left" id="vineLeft"><div class="leaf l1"></div><div class="leaf l2"></div><div class="leaf l3"></div><div class="tendril"></div></div>
+              <div class="plant" id="plantArt"><div class="stem"></div><div class="plant-leaf pl1"></div><div class="plant-leaf pl2"></div><div class="plant-leaf pl3"></div><div class="plant-leaf pl4"></div><div class="flower male-flower" id="maleFlower"><span class="petal p1"></span><span class="petal p2"></span><span class="petal p3"></span><span class="petal p4"></span><span class="petal p5"></span><span class="center"></span><label>♂</label></div><div class="flower female-flower" id="femaleFlower"><span class="petal p1"></span><span class="petal p2"></span><span class="petal p3"></span><span class="petal p4"></span><span class="petal p5"></span><span class="center"></span><label>♀</label><span class="ovary"></span></div><div class="fruit" id="fruitArt"><span></span></div></div>
+              <div class="seed-mound" id="seedMound"><span></span><span></span><span></span><small>YOUR LUFFA SEED</small></div>
+              <div class="bed-label">RICH, MOIST SOIL</div>
+              <div class="bee" id="bee">🐝</div>
+              <div class="rain-drops" id="rainDrops">···</div>
+            </div>
+            <div class="scene-bottom"><span>↗ DRAG YOUR TOOL TO A FLOWER</span><span class="scene-coord">34° 03' N &nbsp; 118° 14' W</span></div>
+          </div>
+          <aside class="garden-side">
+            <div class="task-card"><div class="task-head"><span class="task-icon">✦</span><span class="eyebrow">TODAY'S FIELD TASK</span><span class="task-check" id="taskCheck">1/4</span></div><h3 id="taskTitle">Plant your first seed</h3><p id="taskText">Every luffa begins with a seed. Give yours a home in the garden bed.</p><div class="task-action" id="taskAction"><button class="primary-btn" id="plantBtn">Plant luffa seed <span>↗</span></button></div></div>
+            <div class="tool-card"><div class="tool-card-title"><div><p class="eyebrow">YOUR FIELD KIT</p><h3>Pollination tools</h3></div><span class="kit-count">02</span></div><div class="tools"><button class="tool active" id="brushTool" draggable="true" data-tool="brush"><span class="tool-illustration brush-icon">〰</span><span><b>Soft brush</b><small>Manual transfer</small></span><i>1</i></button><button class="tool" id="bagTool" draggable="true" data-tool="bag"><span class="tool-illustration bag-icon">▤</span><span><b>Flower bag</b><small>Keep pollen out</small></span><i>2</i></button></div><div class="tool-hint" id="toolHint">Pick up pollen from the male flower, then tap a female bloom.</div></div>
+            <div class="fact-card"><span class="fact-spark">✳</span><div><small>BOTANY NOTE 01</small><p>Male flowers make pollen. Female flowers can grow fruit after pollen reaches the <b>stigma</b>.</p></div></div>
+          </aside>
+        </div>
+        <div class="garden-footer"><div class="legend"><span><i class="legend-flower male"></i> Male flower</span><span><i class="legend-flower female"></i> Female flower</span><span><i class="legend-fruit"></i> Developing fruit</span></div><button class="help-link" id="helpBtn">How does pollination work? <span>↗</span></button></div>
+      </section>
+
+      <section class="game-view lab-view hidden" id="labView">
+        <div class="section-heading"><div><p class="eyebrow">YOUR HARVEST, UP CLOSE</p><h2>Luffa lab</h2></div><div class="lab-badge"><span>✦</span> HARVEST SAMPLE <b id="sampleCount">01</b></div></div>
+        <div class="lab-layout">
+          <div class="lab-workspace">
+            <div class="lab-topline"><span class="scene-tag"><i></i> SPECIMEN STATION</span><span class="lab-step" id="labStepLabel">SLIDE PREPARATION · STEP 1/4</span></div>
+            <div class="bench" id="bench">
+              <div class="lab-instructions"><span class="instruction-number" id="instructionNumber">01</span><div><small id="instructionKicker">PREPARE YOUR SLIDE</small><h3 id="labInstruction">Add a drop of water</h3><p id="labInstructionCopy">A wet mount helps light pass through the sample. Click the dropper to add one drop.</p></div></div>
+              <div class="prep-table" id="prepTable">
+                <div class="dropper" id="dropper"><span class="dropper-tip"></span><span class="dropper-body"></span><span class="dropper-bulb"></span></div>
+                <div class="swab" id="labSwab"><span class="swab-head"></span><span class="swab-stick"></span></div>
+                <div class="slide" id="slide"><span class="water-drop" id="waterDrop"></span><span class="sample-dots" id="sampleDots"></span><span class="cover-glass" id="coverGlass"></span><span class="slide-label">LUFFA POLLEN · FRESH</span></div>
+                <div class="cover-tool" id="coverTool"><span>◩</span><small>COVER SLIP</small></div>
+                <span class="table-label label-dropper">DROPPER</span><span class="table-label label-swab">COTTON SWAB</span><span class="table-label label-slide">MICROSCOPE SLIDE</span>
+              </div>
+              <div class="bench-bottom"><span>HANDLE THE COVER GLASS GENTLY</span><button class="primary-btn small-btn" id="labActionBtn">Add water drop <span>↗</span></button></div>
+            </div>
+            <div class="lab-progress"><span id="labProgressBar"></span></div>
+          </div>
+          <aside class="microscope-side">
+            <div class="microscope-card"><div class="microscope-heading"><div><p class="eyebrow">OPTICAL MICROSCOPE</p><h3>Ready when you are</h3></div><span class="live-dot"></span></div>
+              <div class="scope-stage"><div class="microscope-art"><div class="ocular"></div><div class="arm"></div><div class="objective"></div><div class="stage"></div><div class="scope-base"></div><div class="focus-knob knob-one"></div><div class="focus-knob knob-two"></div></div><div class="scope-screen" id="scopeScreen"><div class="scope-crosshair"></div><div class="pollen-grain" id="pollenGrain"><span></span></div><div class="scope-overlay" id="scopeOverlay">PREPARE YOUR SLIDE<br><small>IMAGE WILL APPEAR HERE</small></div></div></div>
+              <div class="scope-controls"><div class="control-row"><div><small>MAGNIFICATION</small><b id="magReadout">40×</b></div><div class="segmented"><button class="mag-btn active" data-mag="40">LOW</button><button class="mag-btn" data-mag="100">HIGH</button></div></div><div class="control-row slider-row"><div><small>LIGHT REFLECTOR</small><b id="lightReadout">65%</b></div><input id="lightSlider" type="range" min="15" max="100" value="65" aria-label="Light reflector"></div><div class="focus-row"><button class="focus-btn" id="coarseFocus">− &nbsp; COARSE</button><div class="focus-meter"><span id="focusMeter"></span></div><button class="focus-btn" id="fineFocus">+ &nbsp; FINE</button></div><div class="total-mag">EYEPIECE 10× &nbsp; × &nbsp; OBJECTIVE <b id="objectiveReadout">4×</b> <span>= &nbsp; TOTAL <strong id="totalReadout">40×</strong></span></div></div>
+            </div>
+            <div class="lab-note"><span>ⓘ</span><p><b>Microscope tip</b><br>Start on low power, then use the fine focus for a crisp view.</p></div>
+          </aside>
+        </div>
+      </section>
+      <footer class="page-footer"><span>GROW CURIOUS <b>✳</b> KEEP LOOKING CLOSER</span><span>LUFFA LAB FIELD GUIDE &nbsp;·&nbsp; VOL. 01</span></footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <div class="modal-backdrop hidden" id="modal"><div class="modal-card"><button class="modal-close" id="modalClose">×</button><span class="modal-flower">✿</span><p class="eyebrow">A QUICK FIELD GUIDE</p><h2 id="modalTitle">Pollination, simply</h2><p id="modalCopy">Pollen must travel from a male flower's anther to a female flower's stigma. Once pollinated, the flower can develop into a fruit containing seeds.</p><button class="primary-btn" id="modalOkay">Got it <span>↗</span></button></div></div>
+  <script src="game.js"></script>
+</body>
+</html>
