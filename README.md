@@ -1,18 +1,25 @@
-# PlayGround
+# TOUCHLINE — Football Club
 
-<!-- omgithub:readme:start -->
-## 🚀 Build, play, and remix with OMGithub
+An original, browser-playable 3D football prototype. The match is rendered in Three.js with an authored stadium, pitch markings, stands/crowd, simple animated player models, ball physics, AI positioning, goals, a broadcast scoreboard and keyboard/touch controls.
 
-**Created using [OMGithub.com](https://go.ondev.store/).**
+## Run locally
 
-[![OMGithub](https://img.shields.io/badge/OMGithub-Open%20project-orange?style=for-the-badge)](https://go.ondev.store/officialahmed2114-source/PlayGround)
-[![GitHub](https://img.shields.io/badge/GitHub-Source-181717?logo=github&style=for-the-badge)](https://github.com/officialahmed2114-source/PlayGround)
+Requires Node.js 18+ and an internet connection for the Three.js CDN module and Google Fonts.
 
-- 🎮 [Open the project](https://go.ondev.store/officialahmed2114-source/PlayGround).
-- ✨ [Remix this project](https://go.ondev.store/officialahmed2114-source/PlayGround?remix=1).
-- 💻 [Explore the source](https://github.com/officialahmed2114-source/PlayGround).
-- 🛠️ [Check build runs](https://github.com/officialahmed2114-source/PlayGround/actions).
-- 🐛 [Report an issue](https://github.com/officialahmed2114-source/PlayGround/issues).
-- 👤 [Explore the creator's projects](https://go.ondev.store/officialahmed2114-source).
-- 🌍 [Create with OMGithub](https://go.ondev.store/).
-<!-- omgithub:readme:end -->
+```sh
+npm start
+```
+
+Open [http://localhost:3000](http://localhost:3000). No install step or build is required.
+
+## Play
+
+- Select **PLAY MATCH** to enter a live match.
+- Desktop: **WASD / arrow keys** move, **Shift** sprint, **F** shoot, **Space** pass, **G** through-pass, **E** switch player, **Q** tackle, **C** skill move, **Esc** pause.
+- Mobile: left virtual joystick and right-side action buttons.
+- The Clubs, Career, Training and Settings menu tabs provide prototype flows; Settings includes weather/day-night variants, and Clubs includes an original club plus inspired club-name placeholders.
+- The match runs to six in-game minutes, tracks goals/shots and shows a full-time event.
+
+## Scope
+
+This is a fully playable small-scope prototype, not a commercial eFootball-scale production. It uses original Touchline branding and generated geometry, with no licensed player likenesses, club crests, commentary, external audio or downloaded assets. Teams, formations, online/local multiplayer, career progression, authentic professional animations, and advanced replay/stat systems are not implemented. The included player and crowd models are lightweight procedural stand-ins; visual quality depends on device/GPU. Three.js is loaded from jsDelivr.
