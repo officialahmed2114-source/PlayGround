@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7ed">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧪</text></svg>">
+  <title>Mister Ahmed's Science Lab — Soap Master Matter Adventure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <button class="brand" id="homeButton" aria-label="Return home"><span class="brand-icon">🧪</span><span><b>AHMED'S LAB</b><small>SCIENCE QUEST</small></span></button>
+      <div class="top-stats" id="topStats" hidden>
+        <div class="stat-chip stage-chip"><span>STAGE</span><b id="stageStat">1 / 20</b></div>
+        <div class="stat-chip score-chip"><span>SCORE</span><b id="scoreStat">0</b></div>
+        <div class="stat-chip lives-chip"><span>ENERGY</span><b id="livesStat">❤️❤️❤️</b></div>
+        <div class="stat-chip timer-chip" id="timerChip" hidden><span>TIME</span><b id="timerStat">60</b></div>
+      </div>
+      <button class="icon-button" id="soundNote" aria-label="Sound-free game">🔇 <span>Sound-free</span></button>
+    </header>
+    <main id="app" aria-live="polite"></main>
+    <footer>Designed by Mister Ahmed Abdelhadi for his lovely students <span>✦</span></footer>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
